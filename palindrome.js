@@ -1,4 +1,8 @@
-// This function checks if the string is a palindrome.
+/**
+ * Checks if a string is a palindrome.
+ * @param {string} str
+ * @return {boolean} The boolean value of the checking.
+ */
 function palindrome(str) {
   
   str = str.replace(/[^A-Za-z0-9]/g, '');
