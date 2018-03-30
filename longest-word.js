@@ -10,6 +10,6 @@ function findLongestWord(str) {
   for(var i=0; i<splitArray.length; i++){
     if(max < splitArray[i].length) max = splitArray[i];
   }
-  max = max.replace('/[^a-zA-Z0-9]/g', '')
+  max = max.replace(/[^a-zA-Z0-9]/g, '')
   return max;
 }
