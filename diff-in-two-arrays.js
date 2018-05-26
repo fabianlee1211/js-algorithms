@@ -1,5 +1,9 @@
-// This function finds the difference of the elements in two arrays.
-
+/**
+ * Finds the difference of the elements in two arrays.
+ * @param {array} arr1
+ * @param {array} arr2
+ * @return {array} The array that contains the differed elements
+ */
 function diffArray(arr1, arr2) {
   var newArr = [];
   var sortArr = [];
