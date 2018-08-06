@@ -9,7 +9,7 @@ function bubbleSort(numbers) {
       if(numbers[j] > numbers[j+1]) {
         numbers[j] = numbers[j+1];
         numbers[j+1] = temp;
-        console.log(numbers);
+        // console.log(numbers);
       } else continue;
     }
   }
