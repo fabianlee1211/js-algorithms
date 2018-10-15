@@ -4237,14 +4237,14 @@
     {
       "name": "shahi-exp-2",
       "key": "shahi-exp-2",
-      "url": "https://s3-ap-southeast-1.amazonaws.com/elasticbeanstalk-ap-southeast-1-203437433422/tab-group/restaurant/Shahi+/Interior+(Entrance).jpg",
+      "url": "https://s3-ap-southeast-1.amazonaws.com/elasticbeanstalk-ap-southeast-1-203437433422/tab-group/restaurant/Shahi+/Tandoori+Items+-+300dpi.JPG",
       "index": 0,
       "experienceId": 34
     },
     {
       "name": "shahi-exp-3",
       "key": "shahi-exp-3",
-      "url": "https://s3-ap-southeast-1.amazonaws.com/elasticbeanstalk-ap-southeast-1-203437433422/tab-group/restaurant/Shahi+/Interior+(Entrance).jpg",
+      "url": "https://s3-ap-southeast-1.amazonaws.com/elasticbeanstalk-ap-southeast-1-203437433422/tab-group/restaurant/Shahi+/Panipuri.jpg",
       "index": 0,
       "experienceId": 35
     },
