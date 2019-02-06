@@ -11,10 +11,8 @@ function palindrome(str) {
   var originalString = str.split('');
   var reversedString = str.split('').reverse();
   
-  if(originalString.length != reversedString.length) return false;
-  
-  for(var i=0; i<originalString.length; i++){
-    if(originalString[i] != reversedString[i]) return false;
+  for(var i = 0; i < originalString.length; i++){
+    if(originalString[i] !== reversedString[i]) return false;
   }
   
   return true;
