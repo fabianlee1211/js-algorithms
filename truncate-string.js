@@ -1,13 +1,16 @@
-// This function truncate some number of letters and replace the extra letters with '...'
-
+/**
+ * Truncate some number of letters and replace the extra letters with '...'
+ * @param {string} str Original string
+ * @param {number} num Max length of string before truncating
+ * @return {string} Truncated string
+ */
 function truncateString(str, num) {
-  // Clear out that junk in your trunk
+  let truncatedString = ''
+  if (num < 1) return ''
+  if (num >= str.length) return str
+  if (num < 4) {
+    truncatedString = `${str.substring(0, num)}...`
+  } else truncatedString = `${str.substring(0, num - 3)}...`
 
-  if (num < 1) return "";
-  else if (num >= str.length) return str;
-  else if (num < 4) {
-    str = str.substring(0, num) + '...';
-  } else str = str.substring(0, num - 3) + '...';
-
-  return str;
+  return truncatedString
 }

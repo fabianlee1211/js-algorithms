@@ -4,13 +4,13 @@
  * @return {string} max The longest word in the string.
  */
 function findLongestWord(str) {
-  var splitArray = str.split(' ');
-  var max = '';
+  const splitArray = str.split(' ')
+  let max = ''
 
-  for(var i = 0; i < splitArray.length; i++){
+  for (let i = 0; i < splitArray.length; i++) {
     // Replace puntuations with empty string
-  	splitArray[i] = splitArray[i].replace(/[^a-zA-Z0-9]/g, '');
-    if(max.length < splitArray[i].length) max = splitArray[i];
+    splitArray[i] = splitArray[i].replace(/[^a-zA-Z0-9]/g, '')
+    if (max.length < splitArray[i].length) max = splitArray[i]
   }
-  return max;
+  return max
 }
