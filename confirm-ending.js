@@ -5,8 +5,10 @@
  * @return {boolean} The index of the target element within the array.
  */
 function confirmEnding(str, target) {
-  str = str.replace(/[^A-Za-z0-9]/g, '')
-  var endChar = str.substring(str.length - target.length)
+  const truncatedString = str.replace(/[^A-Za-z0-9]/g, '')
+  const endChar = truncatedString.substring(
+    truncatedString.length - target.length
+  )
   if (endChar === target) return true
-  else return false
+  return false
 }

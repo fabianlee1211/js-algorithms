@@ -4,11 +4,10 @@
  * @return {string} The missing letter
  */
 function findMissingLetter(str) {
-  var arr = str.toUpperCase()
-  var first = str.charCodeAt(0)
-  for (var i = 1; i < arr.length; i++) {
+  const arr = str.toUpperCase()
+  const first = str.charCodeAt(0)
+  for (let i = 1; i < arr.length; i++) {
     if (str.charCodeAt(i) !== first + i) return String.fromCharCode(first + i)
-    else continue
   }
   return undefined
 }

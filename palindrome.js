@@ -4,16 +4,15 @@
  * @return {boolean} The boolean value of the checking.
  */
 function palindrome(str) {
-  
-  str = str.replace(/[^A-Za-z0-9]/g, '');
-  str = str.toLowerCase();
-  
-  var originalString = str.split('');
-  var reversedString = str.split('').reverse();
-  
-  for(var i = 0; i < originalString.length; i++){
-    if(originalString[i] !== reversedString[i]) return false;
+  str = str.replace(/[^A-Za-z0-9]/g, '')
+  str = str.toLowerCase()
+
+  const originalString = str.split('')
+  const reversedString = str.split('').reverse()
+
+  for (let i = 0; i < originalString.length; i++) {
+    if (originalString[i] !== reversedString[i]) return false
   }
-  
-  return true;
+
+  return true
 }

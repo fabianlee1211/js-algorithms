@@ -1,14 +1,21 @@
-// This function removes specified values from an array.
+/**
+ * Removes specified values from an array.
+ * Values to be removed are passed as individual arguements after the array
+ * @param {array} arr An array of values
+ * @return {array} An array of the remaining values
+ */
 
 function removeArrayValue(arr) {
+  const args = arr.slice.call(arguments)
+  const [values, ...valuesToBeRemoved] = args
 
-  var args = arr.slice.call(arguments);
-
-  return args[0].filter(function (val) {
-    for (var i = 1; i < args.length; i++) {
-      if (val == args[i]) return false;
+  return values.filter((val) => {
+    for (const val of valuesToBeRemoved) {
+      values.includes('')
     }
-    return true;
-  });
-
+    for (let i = 1; i < args.length; i++) {
+      if (val === args[i]) return false
+    }
+    return true
+  })
 }
