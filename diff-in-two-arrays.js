@@ -4,15 +4,15 @@
  * @param {array} arr2
  * @return {array} newArr The array that contains the differed elements
  */
-function diffArray(arr1, arr2) {
-  let newArr = []
-  let sortArr = []
+module.exports = function diffArray(arr1, arr2) {
+  let newArr = [];
+  let sortArr = [];
 
-  newArr = arr1.concat(arr2)
-  sortArr = newArr.slice().sort()
+  newArr = arr1.concat(arr2);
+  sortArr = newArr.slice().sort();
   newArr = sortArr.filter(
-    (el) => !(arr1.indexOf(el) > -1 && arr2.indexOf(el) > -1)
-  )
+    el => !(arr1.indexOf(el) > -1 && arr2.indexOf(el) > -1)
+  );
 
-  return newArr
-}
+  return newArr;
+};

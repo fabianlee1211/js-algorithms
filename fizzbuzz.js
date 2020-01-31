@@ -3,23 +3,23 @@
  * 'Buzz' when the number is multiple of 5,
  * @return {string} A series of FizzBuzz...
  */
-function fizzBuzz() {
-  const FIZZ = 'Fizz'
-  const BUZZ = 'Buzz'
+module.exports = function fizzBuzz() {
+  const FIZZ = 'Fizz';
+  const BUZZ = 'Buzz';
   for (let i = 1; i <= 100; i++) {
-    const fizz = i % 3 === 0
-    const buzz = i % 5 === 0
+    const fizz = i % 3 === 0;
+    const buzz = i % 5 === 0;
     if (fizz && buzz) {
-      console.log(FIZZ + BUZZ)
-      continue
+      console.log(FIZZ + BUZZ);
+      continue;
     }
     if (fizz) {
-      console.log(FIZZ)
-      continue
+      console.log(FIZZ);
+      continue;
     }
     if (buzz) {
-      console.log(BUZZ)
-      continue
+      console.log(BUZZ);
+      continue;
     }
   }
-}
+};

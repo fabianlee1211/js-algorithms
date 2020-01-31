@@ -4,12 +4,12 @@
  * @param {function} func
  * @return {array} The remaining elements in the array.
  */
-function dropElements(arr, func) {
-  if (arr.length <= 0) return arr
+module.exports = function dropElements(arr, func) {
+  if (arr.length <= 0) return arr;
   if (!func(arr[0])) {
-    arr.shift()
-    dropElements(arr, func)
+    arr.shift();
+    dropElements(arr, func);
   }
 
-  return arr
-}
+  return arr;
+};
