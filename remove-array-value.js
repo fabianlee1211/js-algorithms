@@ -5,17 +5,17 @@
  * @return {array} An array of the remaining values
  */
 
-function removeArrayValue(arr) {
-  const args = arr.slice.call(arguments)
-  const [values, ...valuesToBeRemoved] = args
+module.exports = function removeArrayValue(arr) {
+  const args = arr.slice.call(arguments);
+  const [values, ...valuesToBeRemoved] = args;
 
-  return values.filter((val) => {
+  return values.filter(val => {
     for (const val of valuesToBeRemoved) {
-      values.includes('')
+      values.includes('');
     }
     for (let i = 1; i < args.length; i++) {
-      if (val === args[i]) return false
+      if (val === args[i]) return false;
     }
-    return true
-  })
-}
+    return true;
+  });
+};

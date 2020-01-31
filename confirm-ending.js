@@ -4,11 +4,11 @@
  * @param {string} target
  * @return {boolean} The index of the target element within the array.
  */
-function confirmEnding(str, target) {
-  const truncatedString = str.replace(/[^A-Za-z0-9]/g, '')
+module.exports = function confirmEnding(str, target) {
+  const truncatedString = str.replace(/[^A-Za-z0-9]/g, '');
   const endChar = truncatedString.substring(
     truncatedString.length - target.length
-  )
-  if (endChar === target) return true
-  return false
-}
+  );
+  if (endChar === target) return true;
+  return false;
+};
