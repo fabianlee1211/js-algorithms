@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fabianlee1211/js-algorithms.git"
+    "url": "https://github.com/fabianlee1211/js-algorithms.git"
   },
   "author": "fabianlee1211",
   "license": "ISC",
