@@ -4,6 +4,7 @@
   "description": "A bunch of JS coding questions",
   "scripts": {
     "test": "jest",
+    "test:watch": "jest --verbose --watchAll",
     "clean": "rm -rf node_modules && npm install"
   },
   "repository": {

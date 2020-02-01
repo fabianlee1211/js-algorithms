@@ -1,4 +1,4 @@
-const confirmEnding = require('../confirm-ending');
+const confirmEnding = require('../src/confirm-ending');
 
 describe('Confirm Ending', () => {
   it('should return true', () => {

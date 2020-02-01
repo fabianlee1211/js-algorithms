@@ -1,4 +1,4 @@
-const longestWord = require('../longest-word');
+const longestWord = require('../src/longest-word');
 
 describe('Longest Word', () => {
   it('should return an empty string', () => {

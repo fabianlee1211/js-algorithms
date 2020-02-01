@@ -1,4 +1,4 @@
-const dropElements = require('../drop-elements');
+const dropElements = require('../src/drop-elements');
 
 describe('Drop Element', () => {
   it('should return an empty array', () => {

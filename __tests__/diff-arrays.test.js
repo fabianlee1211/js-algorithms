@@ -1,4 +1,4 @@
-const diffArray = require('../diff-arrays');
+const diffArray = require('../src/diff-arrays');
 
 describe('Diff in 2 Arrays', () => {
   it('should return an empty array', () => {

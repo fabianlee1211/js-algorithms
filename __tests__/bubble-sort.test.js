@@ -1,4 +1,4 @@
-const bubbleSort = require('../bubble-sort');
+const bubbleSort = require('../src/bubble-sort');
 
 describe('Bubble Sort', () => {
   it('should sort correctly', () => {
