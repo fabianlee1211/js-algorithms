@@ -10,13 +10,14 @@
     "type": "git",
     "url": "https://github.com/fabianlee1211/js-algorithms.git"
   },
-  "author": "fabianlee1211",
+  "author": "Fabian Lee",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fabianlee1211/js-algorithms/issues"
   },
   "homepage": "https://github.com/fabianlee1211/js-algorithms#readme",
   "devDependencies": {
+    "@types/jest": "^25.1.1",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",

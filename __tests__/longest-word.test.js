@@ -10,4 +10,9 @@ describe('Longest Word', () => {
     const result = longestWord('Italy, France, Belgium, Spain, Portugal');
     expect(result).toEqual('Portugal');
   });
+
+  it('should return multiple words with the same max length', () => {
+    const result = longestWord('Italy, Spain');
+    expect(result).toEqual(['Italy', 'Spain']);
+  });
 });

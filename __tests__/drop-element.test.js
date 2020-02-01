@@ -7,7 +7,7 @@ describe('Drop Element', () => {
     expect(result).toHaveLength(0);
   });
 
-  it('should', () => {
+  it('should drop elements correctly', () => {
     const result = dropElements([1, 2, 3], value => {
       return value >= 2;
     });
