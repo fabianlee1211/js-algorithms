@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A bunch of JS coding questions",
   "scripts": {
-    "test": "jest",
+    "test": "jest --forceExit --verbose --maxWorkers=1",
     "test:watch": "jest --verbose --watchAll",
     "clean": "rm -rf node_modules && npm install"
   },
