@@ -32,7 +32,6 @@ function leastCommonMultiple(arr) {
 function greatestCommonFactor(arr) {
   let smaller = Math.min(...arr);
   let larger = Math.max(...arr);
-  console.log({ smaller, larger });
   if (smaller === larger) return smaller;
   let diff = larger - smaller;
   while (diff !== 0) {
