@@ -5,7 +5,7 @@
 const UPPERCASE_A = 65;
 const UPPERCASE_Z = 90;
 
-class CaesarCipher {
+module.exports = class CaesarCipher {
   constructor(shift) {
     this.shift = shift;
   }
@@ -29,7 +29,7 @@ class CaesarCipher {
    */
   encode(str) {
     const capStr = str.toUpperCase();
-    const arr = [];
+    const characters = [];
     for (let i = 0; i < capStr.length; i++) {
       const currentChar = capStr.charCodeAt(i);
       const isValidCharCodeRange =
@@ -38,11 +38,11 @@ class CaesarCipher {
         let encodedChar = capStr.charCodeAt(i) + this.shift;
         if (encodedChar > UPPERCASE_Z)
           encodedChar = encodedChar - UPPERCASE_Z + UPPERCASE_A - 1;
-        arr.push(encodedChar);
-      } else arr.push(currentChar);
+        characters.push(encodedChar);
+      } else characters.push(currentChar);
     }
 
-    const encodedString = this.translateCharCode(arr);
+    const encodedString = this.translateCharCode(characters);
     return encodedString;
   }
 
@@ -53,7 +53,7 @@ class CaesarCipher {
    */
   decode(str) {
     const capStr = str.toUpperCase();
-    const arr = [];
+    const characters = [];
     for (let i = 0; i < capStr.length; i++) {
       const currentChar = capStr.charCodeAt(i);
       const isValidCharCodeRange =
@@ -62,13 +62,11 @@ class CaesarCipher {
         let encodedChar = capStr.charCodeAt(i) - this.shift;
         if (encodedChar < UPPERCASE_A)
           encodedChar = UPPERCASE_Z - (UPPERCASE_A - encodedChar) + 1;
-        arr.push(encodedChar);
-      } else arr.push(currentChar);
+        characters.push(encodedChar);
+      } else characters.push(currentChar);
     }
 
-    const decodedString = this.translateCharCode(arr);
+    const decodedString = this.translateCharCode(characters);
     return decodedString;
   }
-}
-
-module.exports.CaesarCipher = CaesarCipher;
+};

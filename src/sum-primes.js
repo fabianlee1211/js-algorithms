@@ -3,15 +3,20 @@
  * @param {number} number
  * @return {number} Sum of all prime numbers
  */
-module.exports = function sumPrimes(number) {
+function sumPrimes(number) {
   let sum = 0;
   for (let i = number; i >= 2; i--) {
     if (isPrime(i)) sum += i;
     else continue;
   }
   return sum;
-};
+}
 
+/**
+ * Check if a number is prime
+ * @param {number} number
+ * @return {boolean}
+ */
 function isPrime(number) {
   if (number === 1) return false;
   if (number === 2) return true;
@@ -22,3 +27,8 @@ function isPrime(number) {
     return true;
   }
 }
+
+module.exports = {
+  isPrime,
+  sumPrimes,
+};

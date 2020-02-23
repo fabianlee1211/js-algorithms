@@ -4,18 +4,14 @@
  * @param {array} arr An array of values
  * @return {array} An array of the remaining values
  */
-
-module.exports = function removeArrayValue(arr) {
+module.exports = function removeArrayValues(arr) {
   const args = arr.slice.call(arguments);
   const [values, ...valuesToBeRemoved] = args;
 
+  if (valuesToBeRemoved.length === 0) return values;
+
   return values.filter(val => {
-    for (const val of valuesToBeRemoved) {
-      values.includes('');
-    }
-    for (let i = 1; i < args.length; i++) {
-      if (val === args[i]) return false;
-    }
-    return true;
+    if (valuesToBeRemoved.includes(val)) return false;
+    else return true;
   });
 };
