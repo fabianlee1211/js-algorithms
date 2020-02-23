@@ -1,6 +1,6 @@
 const dropElements = require('../src/drop-elements');
 
-describe('Drop Element', () => {
+describe('Drop Element aka Array.filter', () => {
   it('should return an empty array', () => {
     const result = dropElements([], () => {});
     expect(result).toEqual([]);

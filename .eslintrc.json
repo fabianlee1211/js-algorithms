@@ -16,7 +16,7 @@
   },
   "rules": {
     "linebreak-style": 0,
-    "semi": 0,
+    "semi": 1,
     "comma-dangle": 0,
     "no-plusplus": 0,
     "no-unused-expressions": 0,
