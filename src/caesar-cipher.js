@@ -13,7 +13,7 @@ module.exports = class CaesarCipher {
   /**
    * Translates char codes and join string
    * @param {array} arr An array of char codes
-   * @returns {string}
+   * @returns {string} The translated string
    */
   translateCharCode(arr) {
     for (let j = 0; j < arr.length; j++) {
