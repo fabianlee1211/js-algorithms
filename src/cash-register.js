@@ -23,7 +23,12 @@ module.exports = class CashRegister {
       .findIndex(unit => changeAmount >= currencyUnit.get(unit) * 100);
 
     const changeCash = Array.from(cashInRegister.entries())
-      .slice(0, maxUnitIndex === 0 ? cashInRegister.size : maxUnitIndex)
+      .slice(
+        0,
+        maxUnitIndex === 0
+          ? cashInRegister.size
+          : cashInRegister.size - maxUnitIndex
+      )
       .map(([unit, value]) => [unit, value * 100])
       .reverse();
 
@@ -45,6 +50,8 @@ module.exports = class CashRegister {
         changeAmount -= value;
       }
     }
+    // Edge case where there's enough value but not enough unit for change
+    if (changeAmount > 0) return { status: 'INSUFFICIENT_FUNDS', changes: [] };
     return { status, changes };
   }
 

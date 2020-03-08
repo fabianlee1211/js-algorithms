@@ -12,6 +12,18 @@ const mockCash = [
   ['HUNDRED', 100],
 ];
 
+const mockCashSpecial = [
+  ['PENNY', 0.01],
+  ['NICKEL', 0],
+  ['DIME', 0],
+  ['QUARTER', 0],
+  ['ONE', 1],
+  ['FIVE', 0],
+  ['TEN', 0],
+  ['TWENTY', 0],
+  ['ONE HUNDRED', 0],
+];
+
 describe('Cash Register', () => {
   let cashRegister;
 
@@ -19,7 +31,7 @@ describe('Cash Register', () => {
     cashRegister = new CashRegister(mockCash);
   });
 
-  it('should return OPEN status', () => {
+  it('should return OPEN', () => {
     const result = cashRegister.change(19.5, 20);
     expect(result).toEqual({
       status: 'OPEN',
@@ -27,23 +39,23 @@ describe('Cash Register', () => {
     });
   });
 
-  it('should return OPEN status with coins and bills', () => {
-    const result = cashRegister.change(19.5, 234.1);
+  it('should return OPEN with coins and bills', () => {
+    const result = cashRegister.change(3.26, 100);
     expect(result).toEqual({
       status: 'OPEN',
       changes: [
-        ['HUNDRED', 100],
         ['TWENTY', 60],
         ['TEN', 20],
-        ['FIVE', 30],
-        ['ONE', 4],
+        ['FIVE', 15],
+        ['ONE', 1],
         ['QUARTER', 0.5],
-        ['DIME', 0.1],
+        ['DIME', 0.2],
+        ['PENNY', 0.04],
       ],
     });
   });
 
-  it('should return INSUFFICIENT status', () => {
+  it('should return INSUFFICIENT when the change is greater than all cash', () => {
     const result = cashRegister.change(19.5, 1000);
     expect(result).toEqual({
       status: 'INSUFFICIENT_FUNDS',
@@ -51,7 +63,16 @@ describe('Cash Register', () => {
     });
   });
 
-  it('should return CLOSED status', () => {
+  it('should return INSUFFICIENT when unit is not enough', () => {
+    cashRegister = new CashRegister(mockCashSpecial);
+    const result = cashRegister.change(19.5, 20);
+    expect(result).toEqual({
+      status: 'INSUFFICIENT_FUNDS',
+      changes: [],
+    });
+  });
+
+  it('should return CLOSED', () => {
     const result = cashRegister.change(1, 336.41);
     expect(result).toEqual({
       status: 'CLOSED',
