@@ -3,6 +3,12 @@ module.exports = class CashRegister {
     this.cashInRegister = cashInRegister;
   }
 
+  /**
+   * Calculates what coins and bills for change
+   * @param {number} price - Price of total purchase
+   * @param {number} cash - Paid cash
+   * @returns {object} The status and change
+   */
   change(price, cash) {
     const changes = [];
     let status = 'OPEN';
@@ -55,6 +61,9 @@ module.exports = class CashRegister {
     return { status, changes };
   }
 
+  /**
+   * Calculates the total cash value
+   */
   checkRegisterTotal() {
     return this.cashInRegister
       .map(([_unit, value]) => value * 100)
@@ -62,6 +71,7 @@ module.exports = class CashRegister {
   }
 };
 
+// Map of currency name and its cash value
 const currencyUnit = new Map([
   ['PENNY', 0.01],
   ['NICKEL', 0.05],
