@@ -16,14 +16,14 @@ module.exports = function findMissingLowestPositiveInteger(numbers) {
   sortedNumbers.forEach((number, index) => {
     let difference = 0;
     const isLastIndex = sortedNumbers.length - 1 === index;
-    if (!isLastIndex) {
+
+    if (isLastIndex) {
+      number >= 0 ? missingIntegers.push(number + 1) : missingIntegers.push(1);
+    } else {
       difference = sortedNumbers[index + 1] - number;
       if (difference > 1 && number >= 0) {
         missingIntegers.push(number + 1);
       }
-    }
-    if (isLastIndex) {
-      number >= 0 ? missingIntegers.push(number + 1) : missingIntegers.push(1);
     }
   });
   return missingIntegers[0];
