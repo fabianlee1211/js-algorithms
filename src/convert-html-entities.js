@@ -6,7 +6,7 @@ module.exports = function convertToHTMLEntities(str) {
   const entityRegex = /(\s|&|\"|<|>|\')/g;
   return str.replace(entityRegex, (match, en) => {
     if (!match) return str;
-    else return `&${entitiesTranslations[en]};`;
+    return `&${entitiesTranslations[en]};`;
   });
 };
 
