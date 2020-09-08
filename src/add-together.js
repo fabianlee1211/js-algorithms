@@ -13,7 +13,7 @@ module.exports = function addTogether(...thisArgs) {
 
   if (thisArgs.length > 1) return thisSum;
 
-  return function(...thatArgs) {
+  return function (...thatArgs) {
     const thatSum = thatArgs.reduce((prev, curr) => {
       if (typeof curr !== 'number') return undefined;
       return prev + curr;
@@ -23,4 +23,6 @@ module.exports = function addTogether(...thisArgs) {
 
     return thatSum + thisSum;
   };
+
+  console.log('ahahah');
 };
